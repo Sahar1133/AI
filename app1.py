@@ -24,7 +24,7 @@ def apply_custom_css():
     <style>
     /* Main background with image and overlay */
     .stApp {
-        background-image: url('https://www.freepik.com/free-vector/personal-goals-concept-illustration_13135271.htm#fromView=search&page=1&position=9&uuid=6cf52580-1959-4d5a-af85-86554129e4a1&query=career+prediction');
+        background-image: url('"C:\Users\CHAli\Downloads\ai.avif"');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
