@@ -28,7 +28,7 @@ def apply_custom_css():
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        background: #ffffff;
+      
     }
     
     /* Overlay for content readability */
