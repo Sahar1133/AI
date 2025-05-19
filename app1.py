@@ -24,7 +24,7 @@ def apply_custom_css():
     <style>
     /* Main background with image and overlay */
     .stApp {
-        background-image: url('"C:\Users\CHAli\Downloads\ai.avif"');
+        background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -217,26 +217,24 @@ def apply_custom_css():
 @st.cache_data # Cache the data to avoid reloading on every interaction
 def load_data():
     career_options = [
-        # List of potential career options
-        'Software Developer', 'Data Scientist', 'AI Engineer', 
-        'Cybersecurity Specialist', 'Cloud Architect',
-        'Marketing Manager', 'Financial Analyst', 'HR Manager',
-        'Entrepreneur', 'Investment Banker',
-        'Graphic Designer', 'Video Editor', 'Music Producer',
-        'Creative Writer', 'Art Director',
-        'Mechanical Engineer', 'Electrical Engineer', 
-        'Civil Engineer', 'Robotics Engineer',
-        'Doctor', 'Nurse', 'Psychologist', 
-        'Physical Therapist', 'Medical Researcher',
-        'Biotechnologist', 'Research Scientist', 
-        'Environmental Scientist', 'Physicist',
-        'Teacher', 'Professor', 'Educational Consultant',
-        'Curriculum Developer',
-        'Lawyer', 'Judge', 'Legal Consultant',
-        'UX Designer', 'Product Manager',
-        'Journalist', 'Public Relations Specialist',
-        'Architect', 'Urban Planner',
-        'Chef', 'Event Planner', 'Fashion Designer'
+        'Zoologist', 'Pharmacist', 'Forensic Scientist', 'Pediatric Nurse',
+        'Market Research Analyst', 'Game Developer', 'Geologist', 'Speech Therapist',
+        'Data Analyst', 'Civil Engineer', 'Teacher', 'Genetic Counselor',
+        'Environmental Engineer', 'Financial Planner', 'Air Traffic Controller',
+        'Fashion Stylist', 'Human Resources Manager', 'Architect', 'Video Game Tester',
+        'Administrative Officer', 'Industrial Engineer', 'Social Worker', 'Chef',
+        'Film Director', 'Human Rights Lawyer', 'Astronomer', 'Fashion Designer',
+        'Biologist', 'Public Health Analyst', 'Forestry Technician', 'Salesperson',
+        'Investment Banker', 'Marketing Coordinator', 'Wildlife Biologist',
+        'Software Quality Assurance Tester', 'Interior Designer', 'Public Relations Specialist',
+        'Nurse', 'Aerospace Engineer', 'Marketing Manager', 'Database Administrator',
+        'Web Developer', 'Mechanical Designer', 'IT Support Specialist', 'Dental Hygienist',
+        'Psychologist', 'Occupational Therapist', 'Tax Accountant', 'Software Developer',
+        'Musician', 'Journalist', 'Real Estate Agent', 'Speech Pathologist',
+        'Biotechnologist', 'Environmental Scientist', 'Police Officer', 'Foreign Service Officer',
+        'Accountant', 'Rehabilitation Counselor', 'Robotics Engineer', 'Artist',
+        'Marketing Analyst', 'Event Photographer', 'Research Scientist', 'HR Recruiter',
+        'Forensic Psychologist', 'Insurance Underwriter', 'Marine Biologist', 'Technical Writer'
     ]
     
     try:
@@ -255,8 +253,40 @@ def load_data():
             'Communication_Skills': np.random.choice(['Low', 'Medium', 'High'], 200),
             'Leadership_Skills': np.random.choice(['Low', 'Medium', 'High'], 200),
             'Teamwork_Skills': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Decision_Making': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Aptitude_Level': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Field_of_Study': np.random.choice(['Biology', 'Chemistry', 'Physics', 'Mathematics', 'Computer Science',
+                                              'Engineering', 'Environmental Science', 'Psychology', 'Economics', 'Business',
+                                              'Law', 'Art and Design', 'Political Science', 'Medicine', 'Pharmacy',
+                                              'Nursing', 'Education', 'Communication', 'Journalism', 'Sociology'], 200),
+            'Adaptability': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Time_Management': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Problem_Solving': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Emotional_Intelligence': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Stress_Tolerance': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Learning_Style': np.random.choice(['Reading/Writing', 'Auditory', 'Visual', 'Kinesthetic'], 200),
+            'Technical_Skill_Level': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Risk_Tolerance': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Introvert_Extrovert_Score': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Workplace_Preference': np.random.choice(['Remote', 'On-site', 'Hybrid'], 200),
+            'Work_Life_Balance_Preference': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Salary_Expectation': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Openness': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Conscientiousness': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Extraversion': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Agreeableness': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Neuroticism': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Creativity_Score': np.random.choice(['Low', 'Medium', 'High'], 200),
+            'Location_Preference': np.random.choice(['Urban', 'Rural', 'Flexible'], 200),
+            'Willing_to_Relocate': np.random.choice(['Yes', 'No'], 200),
+            'Industry_of_Experience': np.random.choice(['Arts', 'Construction', 'Education', 'Finance', 'Healthcare', 'Law', 'Retail', 'Tech'], 200),
+            'Internship_Experience': np.random.choice(['Yes', 'No'], 200),
+            'Remote_Work_Experience': np.random.choice(['Yes', 'No'], 200),
+            'LinkedIn_Portfolio': np.random.choice(['Yes', 'No'], 200),
+            'Public_Speaking_Experience': np.random.choice(['Yes', 'No'], 200),
             'GPA': np.round(np.random.uniform(2.0, 4.0, 200), 1),
             'Years_of_Experience': np.random.randint(0, 20, 200),
+            'Certifications_Count': np.random.randint(0, 5, 200),
             'Predicted_Career_Field': np.random.choice(career_options, 200)
         })
     # Clean GPA data if it exists
@@ -282,6 +312,7 @@ def preprocess_data(data):
     if 'Predicted_Career_Field' in data.columns:
         data['Predicted_Career_Field'] = le.fit_transform(data['Predicted_Career_Field'])
     return data, le # Return processed data and the target encoder
+
 # Process the data
 processed_data, target_le = preprocess_data(data.copy())
 
@@ -312,324 +343,436 @@ model, accuracy = train_model(processed_data)
 
 # ====================== QUESTIONNAIRE ======================
 def get_all_questions():
-    """Returns a pool of 30 questions"""
-    return [
-        # Interest Questions (1-8)
-        {
-            "question": "1. Which of these activities excites you most?",
-            "options": [
-                {"text": "Coding or working with technology", "value": "Technology"},
-                {"text": "Analyzing market trends", "value": "Business"},
-                {"text": "Creating art or designs", "value": "Arts"},
-                {"text": "Building or fixing mechanical things", "value": "Engineering"},
-                {"text": "Helping people with health issues", "value": "Medical"},
-                {"text": "Conducting experiments", "value": "Science"},
-                {"text": "Teaching others", "value": "Education"},
-                {"text": "Debating or solving legal problems", "value": "Law"}
-            ],
-            "feature": "Interest"
-        },
-        {
-            "question": "2. What type of books/movies do you enjoy most?",
-            "options": [
-                {"text": "Sci-fi and technology", "value": "Technology"},
-                {"text": "Business success stories", "value": "Business"},
-                {"text": "Creative arts and design", "value": "Arts"},
-                {"text": "How things work", "value": "Engineering"},
-                {"text": "Medical dramas", "value": "Medical"},
-                {"text": "Scientific discoveries", "value": "Science"},
-                {"text": "Educational content", "value": "Education"},
-                {"text": "Courtroom dramas", "value": "Law"}
-            ],
-            "feature": "Interest"
-        },
-        {
-            "question": "3. Which subject did you enjoy most in school?",
-            "options": [
-                {"text": "Computer Science", "value": "Technology"},
-                {"text": "Economics/Business", "value": "Business"},
-                {"text": "Art/Music", "value": "Arts"},
-                {"text": "Physics/Engineering", "value": "Engineering"},
-                {"text": "Biology/Medicine", "value": "Medical"},
-                {"text": "Chemistry/Physics", "value": "Science"},
-                {"text": "Education/Psychology", "value": "Education"},
-                {"text": "Government/Law", "value": "Law"}
-            ],
-            "feature": "Interest"
-        },
-        {
-            "question": "4. What type of projects do you enjoy most?",
-            "options": [
-                {"text": "Developing software/apps", "value": "Technology"},
-                {"text": "Creating business plans", "value": "Business"},
-                {"text": "Designing visuals/artwork", "value": "Arts"},
-                {"text": "Building physical prototypes", "value": "Engineering"},
-                {"text": "Helping people directly", "value": "Medical"},
-                {"text": "Research experiments", "value": "Science"},
-                {"text": "Teaching/mentoring", "value": "Education"},
-                {"text": "Analyzing legal cases", "value": "Law"}
-            ],
-            "feature": "Interest"
-        },
-
-        # Work Style Questions (5-8)
-        {
-            "question": "5. How do you prefer to work?",
-            "options": [
-                {"text": "Alone with clear tasks", "value": "Independent"},
-                {"text": "In a team environment", "value": "Collaborative"},
-                {"text": "A flexible mix of both", "value": "Flexible"}
-            ],
-            "feature": "Work_Style"
-        },
-        {
-            "question": "6. Your ideal project would involve:",
-            "options": [
-                {"text": "Working independently on your part", "value": "Independent"},
-                {"text": "Constant collaboration with others", "value": "Collaborative"},
-                {"text": "Some teamwork with independent phases", "value": "Flexible"}
-            ],
-            "feature": "Work_Style"
-        },
-        {
-            "question": "7. When facing a difficult problem, you:",
-            "options": [
-                {"text": "Prefer to solve it yourself", "value": "Independent"},
-                {"text": "Ask colleagues for input", "value": "Collaborative"},
-                {"text": "Try yourself first, then ask for help", "value": "Flexible"}
-            ],
-            "feature": "Work_Style"
-        },
-        {
-            "question": "8. Your ideal work schedule would be:",
-            "options": [
-                {"text": "Strict 9-5 with clear boundaries", "value": "Independent"},
-                {"text": "Flexible hours with team coordination", "value": "Collaborative"},
-                {"text": "Mix of structured and flexible time", "value": "Flexible"}
-            ],
-            "feature": "Work_Style"
-        },
-
-        # Strengths Questions (9-12)
-        {
-            "question": "9. What comes most naturally to you?",
-            "options": [
-                {"text": "Solving complex problems", "value": "Analytical"},
-                {"text": "Coming up with creative ideas", "value": "Creative"},
-                {"text": "Planning long-term strategies", "value": "Strategic"},
-                {"text": "Building practical solutions", "value": "Practical"}
-            ],
-            "feature": "Strengths"
-        },
-        {
-            "question": "10. Others would describe you as:",
-            "options": [
-                {"text": "Logical and detail-oriented", "value": "Analytical"},
-                {"text": "Imaginative and original", "value": "Creative"},
-                {"text": "Visionary and forward-thinking", "value": "Strategic"},
-                {"text": "Hands-on and resourceful", "value": "Practical"}
-            ],
-            "feature": "Strengths"
-        },
-        {
-            "question": "11. Your strongest skill is:",
-            "options": [
-                {"text": "Data analysis", "value": "Analytical"},
-                {"text": "Creative thinking", "value": "Creative"},
-                {"text": "Long-term planning", "value": "Strategic"},
-                {"text": "Practical implementation", "value": "Practical"}
-            ],
-            "feature": "Strengths"
-        },
-        {
-            "question": "12. In school projects, you typically:",
-            "options": [
-                {"text": "Handled the data/analysis parts", "value": "Analytical"},
-                {"text": "Came up with creative concepts", "value": "Creative"},
-                {"text": "Organized the overall strategy", "value": "Strategic"},
-                {"text": "Built the practical deliverables", "value": "Practical"}
-            ],
-            "feature": "Strengths"
-        },
-
-        # Communication Skills (13-16)
-        {
-            "question": "13. In social situations, you:",
-            "options": [
-                {"text": "Prefer listening to speaking", "value": "Low"},
-                {"text": "Speak when you have something to say", "value": "Medium"},
-                {"text": "Easily engage in conversations", "value": "High"}
-            ],
-            "feature": "Communication_Skills"
-        },
-        {
-            "question": "14. When explaining something complex, you:",
-            "options": [
-                {"text": "Struggle to put it in simple terms", "value": "Low"},
-                {"text": "Can explain if you prepare", "value": "Medium"},
-                {"text": "Naturally simplify complex ideas", "value": "High"}
-            ],
-            "feature": "Communication_Skills"
-        },
-        {
-            "question": "15. In group presentations, you typically:",
-            "options": [
-                {"text": "Handle the background research", "value": "Low"},
-                {"text": "Present your specific part", "value": "Medium"},
-                {"text": "Take the lead in presenting", "value": "High"}
-            ],
-            "feature": "Communication_Skills"
-        },
-        {
-            "question": "16. When networking professionally, you:",
-            "options": [
-                {"text": "Find it challenging", "value": "Low"},
-                {"text": "Can do it when necessary", "value": "Medium"},
-                {"text": "Enjoy meeting new people", "value": "High"}
-            ],
-            "feature": "Communication_Skills"
-        },
-
-        # Leadership Skills (17-20)
-        {
-            "question": "17. When a group needs direction, you:",
-            "options": [
-                {"text": "Wait for someone else to step up", "value": "Low"},
-                {"text": "Help if no one else does", "value": "Medium"},
-                {"text": "Naturally take the lead", "value": "High"}
-            ],
-            "feature": "Leadership_Skills"
-        },
-        {
-            "question": "18. Your approach to responsibility is:",
-            "options": [
-                {"text": "Avoid taking charge", "value": "Low"},
-                {"text": "Take charge when needed", "value": "Medium"},
-                {"text": "Seek leadership roles", "value": "High"}
-            ],
-            "feature": "Leadership_Skills"
-        },
-        {
-            "question": "19. In team projects, you usually:",
-            "options": [
-                {"text": "Follow others' lead", "value": "Low"},
-                {"text": "Share leadership duties", "value": "Medium"},
-                {"text": "Organize the team's work", "value": "High"}
-            ],
-            "feature": "Leadership_Skills"
-        },
-        {
-            "question": "20. When making group decisions, you:",
-            "options": [
-                {"text": "Go with the majority", "value": "Low"},
-                {"text": "Voice your opinion when asked", "value": "Medium"},
-                {"text": "Facilitate the decision-making", "value": "High"}
-            ],
-            "feature": "Leadership_Skills"
-        },
-
-        # Teamwork Skills (21-24)
-        {
-            "question": "21. In group settings, you usually:",
-            "options": [
-                {"text": "Focus on your individual tasks", "value": "Low"},
-                {"text": "Coordinate when necessary", "value": "Medium"},
-                {"text": "Actively collaborate with others", "value": "High"}
-            ],
-            "feature": "Teamwork_Skills"
-        },
-        {
-            "question": "22. When a teammate needs help, you:",
-            "options": [
-                {"text": "Let them figure it out", "value": "Low"},
-                {"text": "Help if they ask", "value": "Medium"},
-                {"text": "Proactively offer assistance", "value": "High"}
-            ],
-            "feature": "Teamwork_Skills"
-        },
-        {
-            "question": "23. Your view on teamwork is:",
-            "options": [
-                {"text": "Prefer working alone", "value": "Low"},
-                {"text": "Teamwork has its benefits", "value": "Medium"},
-                {"text": "Believe in the power of collaboration", "value": "High"}
-            ],
-            "feature": "Teamwork_Skills"
-        },
-        {
-            "question": "24. In conflict situations, you:",
-            "options": [
-                {"text": "Avoid getting involved", "value": "Low"},
-                {"text": "Help mediate if needed", "value": "Medium"},
-                {"text": "Actively work to resolve conflicts", "value": "High"}
-            ],
-            "feature": "Teamwork_Skills"
-        },
-
-        # Additional Career-Relevant Questions (25-30)
-        {
-            "question": "25. How do you handle deadlines?",
-            "options": [
-                {"text": "I often procrastinate", "value": "Low"},
-                {"text": "I meet them with some effort", "value": "Medium"},
-                {"text": "I consistently meet them early", "value": "High"}
-            ],
-            "feature": "Time_Management"
-        },
-        {
-            "question": "26. When learning something new, you prefer:",
-            "options": [
-                {"text": "Hands-on practice", "value": "Practical"},
-                {"text": "Theoretical understanding", "value": "Theoretical"},
-                {"text": "Visual demonstrations", "value": "Visual"},
-                {"text": "Group discussions", "value": "Social"}
-            ],
-            "feature": "Learning_Style"
-        },
-        {
-            "question": "27. Your ideal work environment is:",
-            "options": [
-                {"text": "Structured and predictable", "value": "Structured"},
-                {"text": "Dynamic and changing", "value": "Dynamic"},
-                {"text": "Creative and open", "value": "Creative"},
-                {"text": "Fast-paced and challenging", "value": "Challenging"}
-            ],
-            "feature": "Work_Environment"
-        },
-        {
-            "question": "28. When faced with a problem, you:",
-            "options": [
-                {"text": "Follow established procedures", "value": "Procedural"},
-                {"text": "Brainstorm creative solutions", "value": "Creative"},
-                {"text": "Analyze data thoroughly", "value": "Analytical"},
-                {"text": "Ask others for advice", "value": "Collaborative"}
-            ],
-            "feature": "Problem_Solving"
-        },
-        {
-            "question": "29. When making decisions, you rely mostly on:",
-            "options": [
-                {"text": "Logic and facts", "value": "Logical"},
-                {"text": "Gut feelings", "value": "Intuitive"},
-                {"text": "Others' opinions", "value": "Social"},
-                {"text": "Past experiences", "value": "Experiential"}
-            ],
-            "feature": "Decision_Making"
-        },
-        {
-            "question": "30. You consider yourself more:",
-            "options": [
-                {"text": "Realistic and practical", "value": "Practical"},
-                {"text": "Imaginative and innovative", "value": "Innovative"},
-                {"text": "People-oriented", "value": "Social"},
-                {"text": "Detail-oriented", "value": "Detail"}
-            ],
-            "feature": "Self_Perception"
-        }
-    ]
+    """Returns a pool of questions organized by category"""
+    questions_dict = {
+        "Interest": [
+            {
+                "question": "What is your area of interest?",
+                "options": [
+                    {"text": "Zoologist", "value": "Zoologist"},
+                    {"text": "Pharmacist", "value": "Pharmacist"},
+                    {"text": "Forensic Scientist", "value": "Forensic Scientist"},
+                    {"text": "Pediatric Nurse", "value": "Pediatric Nurse"},
+                    {"text": "Market Research Analyst", "value": "Market Research Analyst"},
+                    {"text": "Game Developer", "value": "Game Developer"},
+                    {"text": "Geologist", "value": "Geologist"},
+                    {"text": "Speech Therapist", "value": "Speech Therapist"},
+                    {"text": "Data Analyst", "value": "Data Analyst"},
+                    {"text": "Civil Engineer", "value": "Civil Engineer"},
+                    {"text": "Teacher", "value": "Teacher"},
+                    {"text": "Genetic Counselor", "value": "Genetic Counselor"},
+                    {"text": "Environmental Engineer", "value": "Environmental Engineer"},
+                    {"text": "Financial Planner", "value": "Financial Planner"},
+                    {"text": "Air Traffic Controller", "value": "Air Traffic Controller"},
+                    {"text": "Fashion Stylist", "value": "Fashion Stylist"},
+                    {"text": "Human Resources Manager", "value": "Human Resources Manager"},
+                    {"text": "Architect", "value": "Architect"},
+                    {"text": "Video Game Tester", "value": "Video Game Tester"},
+                    {"text": "Administrative Officer", "value": "Administrative Officer"}
+                ],
+                "feature": "Interest"
+            }
+        ],
+        "Work_Style": [
+            {
+                "question": "How do you prefer to structure your day?",
+                "options": [
+                    {"text": "I create and follow my own plan", "value": "Independent"},
+                    {"text": "I adjust based on how the day unfolds", "value": "Flexible"},
+                    {"text": "I coordinate closely with others", "value": "Collaborative"}
+                ],
+                "feature": "Work_Style"
+            },
+            {
+                "question": "When working on a group project, what role do you naturally take?",
+                "options": [
+                    {"text": "I prefer to work on my own tasks solo", "value": "Independent"},
+                    {"text": "I switch roles based on what's needed", "value": "Flexible"},
+                    {"text": "I bring people together and coordinate efforts", "value": "Collaborative"}
+                ],
+                "feature": "Work_Style"
+            }
+        ],
+        "Strengths": [
+            {
+                "question": "When you're faced with a complex issue, what's your first instinct?",
+                "options": [
+                    {"text": "Create something new and imaginative", "value": "Creative"},
+                    {"text": "Strategize and plan the steps carefully", "value": "Strategic"},
+                    {"text": "Break it down into logical, solvable parts", "value": "Analytical"}
+                ],
+                "feature": "Strengths"
+            },
+            {
+                "question": "Which compliment resonates the most with you?",
+                "options": [
+                    {"text": "You're incredibly imaginative!", "value": "Creative"},
+                    {"text": "You always see the big picture.", "value": "Strategic"},
+                    {"text": "You have excellent problem-solving skills.", "value": "Analytical"}
+                ],
+                "feature": "Strengths"
+            }
+        ],
+        "Communication_Skills": [
+            {
+                "question": "During group discussions, how do you usually participate?",
+                "options": [
+                    {"text": "I lead the conversation and clarify ideas", "value": "High"},
+                    {"text": "I share my thoughts and support others", "value": "Medium"},
+                    {"text": "I prefer to stay quiet and observe", "value": "Low"}
+                ],
+                "feature": "Communication_Skills"
+            }
+        ],
+        "Leadership_Skills": [
+            {
+                "question": "When a team faces a challenge, what is your typical role?",
+                "options": [
+                    {"text": "I take charge and guide the team toward a solution", "value": "High"},
+                    {"text": "I support the leader and help implement ideas", "value": "Medium"},
+                    {"text": "I wait for others to take charge and follow along", "value": "Low"}
+                ],
+                "feature": "Leadership_Skills"
+            }
+        ],
+        "Teamwork_Skills": [
+            {
+                "question": "How do you contribute to a team's success?",
+                "options": [
+                    {"text": "I actively collaborate, offering ideas and support to everyone", "value": "High"},
+                    {"text": "I participate when needed and contribute in specific areas", "value": "Medium"},
+                    {"text": "I mostly work alone and only contribute when asked", "value": "Low"}
+                ],
+                "feature": "Teamwork_Skills"
+            }
+        ],
+        "Decision_Making": [
+            {
+                "question": "When faced with a difficult decision, how do you approach it?",
+                "options": [
+                    {"text": "I gather information, weigh the pros and cons, and make an informed decision", "value": "High"},
+                    {"text": "I seek input from others and try to make a balanced decision", "value": "Medium"},
+                    {"text": "I avoid making decisions and leave them to others", "value": "Low"}
+                ],
+                "feature": "Decision_Making"
+            }
+        ],
+        "Aptitude_Level": [
+            {
+                "question": "If 5 machines take 5 minutes to make 5 products, how long will 100 machines take to make 100 products?",
+                "options": [
+                    {"text": "5 minutes", "value": "High"},
+                    {"text": "50 minutes", "value": "Medium"},
+                    {"text": "100 minutes", "value": "Low"}
+                ],
+                "feature": "Aptitude_Level"
+            }
+        ],
+        "Field_of_Study": [
+            {
+                "question": "Which academic field do you feel most passionate about?",
+                "options": [
+                    {"text": "Biology", "value": "Biology"},
+                    {"text": "Chemistry", "value": "Chemistry"},
+                    {"text": "Physics", "value": "Physics"},
+                    {"text": "Mathematics", "value": "Mathematics"},
+                    {"text": "Computer Science", "value": "Computer Science"},
+                    {"text": "Engineering", "value": "Engineering"},
+                    {"text": "Environmental Science", "value": "Environmental Science"},
+                    {"text": "Psychology", "value": "Psychology"},
+                    {"text": "Economics", "value": "Economics"},
+                    {"text": "Business", "value": "Business"}
+                ],
+                "feature": "Field_of_Study"
+            }
+        ],
+        "Adaptability": [
+            {
+                "question": "How do you react when plans change at the last minute?",
+                "options": [
+                    {"text": "I quickly adjust and move forward", "value": "High"},
+                    {"text": "I feel a bit uneasy but manage", "value": "Medium"},
+                    {"text": "I get frustrated and find it hard to cope", "value": "Low"}
+                ],
+                "feature": "Adaptability"
+            }
+        ],
+        "Time_Management": [
+            {
+                "question": "How often do you create a to-do list or plan your day in advance?",
+                "options": [
+                    {"text": "Daily - I rely on it to stay organized", "value": "High"},
+                    {"text": "Occasionally, when I have a lot to do", "value": "Medium"},
+                    {"text": "Rarely - I go with the flow", "value": "Low"}
+                ],
+                "feature": "Time_Management"
+            }
+        ],
+        "Problem_Solving": [
+            {
+                "question": "When faced with a complex problem, what is your first reaction?",
+                "options": [
+                    {"text": "Break it down and analyze step by step", "value": "High"},
+                    {"text": "Try a few things and see what works", "value": "Medium"},
+                    {"text": "Feel overwhelmed and unsure how to begin", "value": "Low"}
+                ],
+                "feature": "Problem_Solving"
+            }
+        ],
+        "Emotional_Intelligence": [
+            {
+                "question": "How do you react when you feel angry or frustrated?",
+                "options": [
+                    {"text": "I recognize my emotions and take a step back to calm down", "value": "High"},
+                    {"text": "I try to ignore it or bottle it up", "value": "Medium"},
+                    {"text": "I express it right away, often without thinking", "value": "Low"}
+                ],
+                "feature": "Emotional_Intelligence"
+            }
+        ],
+        "Stress_Tolerance": [
+            {
+                "question": "How do you typically feel when you are faced with multiple deadlines or tasks at once?",
+                "options": [
+                    {"text": "I stay calm, prioritize, and work through the tasks methodically", "value": "High"},
+                    {"text": "I feel stressed but manage to get through it with some effort", "value": "Medium"},
+                    {"text": "I feel overwhelmed and struggle to complete tasks", "value": "Low"}
+                ],
+                "feature": "Stress_Tolerance"
+            }
+        ],
+        "Learning_Style": [
+            {
+                "question": "When you are studying or learning new information, which method works best for you?",
+                "options": [
+                    {"text": "Writing notes, summarizing what I've learned, or reading books/articles", "value": "Reading/Writing"},
+                    {"text": "Listening to podcasts, lectures, or discussions", "value": "Auditory"},
+                    {"text": "Watching videos, diagrams, or other visual content", "value": "Visual"},
+                    {"text": "Actively doing hands-on activities, practicing tasks, or using physical examples", "value": "Kinesthetic"}
+                ],
+                "feature": "Learning_Style"
+            }
+        ],
+        "Technical_Skill_Level": [
+            {
+                "question": "When using a new software or tool, how do you usually proceed?",
+                "options": [
+                    {"text": "I explore it confidently and figure it out on my own", "value": "High"},
+                    {"text": "I need some guidance or tutorials to get started", "value": "Medium"},
+                    {"text": "I feel unsure and prefer someone else sets it up", "value": "Low"}
+                ],
+                "feature": "Technical_Skill_Level"
+            }
+        ],
+        "Risk_Tolerance": [
+            {
+                "question": "When presented with a new opportunity that has both high rewards and high risk, what is your initial reaction?",
+                "options": [
+                    {"text": "I feel excited and consider how to take it strategically", "value": "High"},
+                    {"text": "I weigh the pros and cons carefully before deciding", "value": "Medium"},
+                    {"text": "I avoid it unless the risk is minimal", "value": "Low"}
+                ],
+                "feature": "Risk_Tolerance"
+            }
+        ],
+        "Introvert_Extrovert_Score": [
+            {
+                "question": "How do you usually feel after spending a few hours at a lively social gathering?",
+                "options": [
+                    {"text": "Energized and excited to keep socializing", "value": "High"},
+                    {"text": "It was fun, but I need a bit of alone time now", "value": "Medium"},
+                    {"text": "Drained and ready for quiet solitude", "value": "Low"}
+                ],
+                "feature": "Introvert_Extrovert_Score"
+            }
+        ],
+        "Workplace_Preference": [
+            {
+                "question": "What type of setting makes you feel most productive during the day?",
+                "options": [
+                    {"text": "A quiet home office", "value": "Remote"},
+                    {"text": "A collaborative open office", "value": "On-site"},
+                    {"text": "A mix depending on the task", "value": "Hybrid"}
+                ],
+                "feature": "Workplace_Preference"
+            }
+        ],
+        "Work_Life_Balance_Preference": [
+            {
+                "question": "What do you typically do after work?",
+                "options": [
+                    {"text": "Unplug and relax", "value": "High"},
+                    {"text": "Catch up on more tasks", "value": "Low"},
+                    {"text": "Check emails but relax later", "value": "Moderate"}
+                ],
+                "feature": "Work_Life_Balance_Preference"
+            }
+        ],
+        "Salary_Expectation": [
+            {
+                "question": "What makes a job offer attractive?",
+                "options": [
+                    {"text": "Salary", "value": "High"},
+                    {"text": "Culture and learning", "value": "Low"},
+                    {"text": "A mix", "value": "Moderate"}
+                ],
+                "feature": "Salary_Expectation"
+            }
+        ],
+        "Openness": [
+            {
+                "question": "What's your reaction to new, abstract ideas?",
+                "options": [
+                    {"text": "Excited and curious", "value": "High"},
+                    {"text": "Interested but cautious", "value": "Medium"},
+                    {"text": "Skeptical or uninterested", "value": "Low"}
+                ],
+                "feature": "Openness"
+            }
+        ],
+        "Conscientiousness": [
+            {
+                "question": "How do you usually manage your tasks?",
+                "options": [
+                    {"text": "I plan everything ahead", "value": "High"},
+                    {"text": "I manage as things come", "value": "Medium"},
+                    {"text": "I often forget or delay", "value": "Low"}
+                ],
+                "feature": "Conscientiousness"
+            }
+        ],
+        "Extraversion": [
+            {
+                "question": "What gives you energy?",
+                "options": [
+                    {"text": "Social interaction", "value": "High"},
+                    {"text": "A mix of social and alone time", "value": "Medium"},
+                    {"text": "Solitude", "value": "Low"}
+                ],
+                "feature": "Extraversion"
+            }
+        ],
+        "Agreeableness": [
+            {
+                "question": "When a team member makes a mistake, how do you respond?",
+                "options": [
+                    {"text": "Help them correct it gently", "value": "High"},
+                    {"text": "Point it out constructively", "value": "Medium"},
+                    {"text": "Get frustrated or blame", "value": "Low"}
+                ],
+                "feature": "Agreeableness"
+            }
+        ],
+        "Neuroticism": [
+            {
+                "question": "How do you handle criticism?",
+                "options": [
+                    {"text": "Stay calm and reflect", "value": "Low"},
+                    {"text": "Feel a bit affected but move on", "value": "Medium"},
+                    {"text": "Take it personally and dwell on it", "value": "High"}
+                ],
+                "feature": "Neuroticism"
+            }
+        ],
+        "Creativity_Score": [
+            {
+                "question": "When faced with a problem, how do you usually approach finding a solution?",
+                "options": [
+                    {"text": "I look for new, unconventional ways to solve it", "value": "High"},
+                    {"text": "I consider some different options but mostly rely on proven methods", "value": "Medium"},
+                    {"text": "I prefer sticking to the usual, well-established solutions", "value": "Low"}
+                ],
+                "feature": "Creativity_Score"
+            }
+        ],
+        "Location_Preference": [
+            {
+                "question": "Where would you prefer to work?",
+                "options": [
+                    {"text": "Urban area with many opportunities", "value": "Urban"},
+                    {"text": "Rural area with peaceful environment", "value": "Rural"},
+                    {"text": "I'm flexible about location", "value": "Flexible"}
+                ],
+                "feature": "Location_Preference"
+            }
+        ],
+        "Willing_to_Relocate": [
+            {
+                "question": "Are you willing to relocate for a job opportunity?",
+                "options": [
+                    {"text": "Yes, I'm open to relocating", "value": "Yes"},
+                    {"text": "No, I prefer to stay in my current location", "value": "No"}
+                ],
+                "feature": "Willing_to_Relocate"
+            }
+        ],
+        "Industry_of_Experience": [
+            {
+                "question": "Which industry do you have the most experience in?",
+                "options": [
+                    {"text": "Arts", "value": "Arts"},
+                    {"text": "Construction", "value": "Construction"},
+                    {"text": "Education", "value": "Education"},
+                    {"text": "Finance", "value": "Finance"},
+                    {"text": "Healthcare", "value": "Healthcare"},
+                    {"text": "Law", "value": "Law"},
+                    {"text": "Retail", "value": "Retail"},
+                    {"text": "Tech", "value": "Tech"}
+                ],
+                "feature": "Industry_of_Experience"
+            }
+        ],
+        "Internship_Experience": [
+            {
+                "question": "Do you have any internship experience?",
+                "options": [
+                    {"text": "Yes", "value": "Yes"},
+                    {"text": "No", "value": "No"}
+                ],
+                "feature": "Internship_Experience"
+            }
+        ],
+        "Remote_Work_Experience": [
+            {
+                "question": "Do you have experience working remotely?",
+                "options": [
+                    {"text": "Yes", "value": "Yes"},
+                    {"text": "No", "value": "No"}
+                ],
+                "feature": "Remote_Work_Experience"
+            }
+        ],
+        "LinkedIn_Portfolio": [
+            {
+                "question": "Do you have a LinkedIn profile or professional portfolio?",
+                "options": [
+                    {"text": "Yes", "value": "Yes"},
+                    {"text": "No", "value": "No"}
+                ],
+                "feature": "LinkedIn_Portfolio"
+            }
+        ],
+        "Public_Speaking_Experience": [
+            {
+                "question": "Do you have any public speaking experience?",
+                "options": [
+                    {"text": "Yes", "value": "Yes"},
+                    {"text": "No", "value": "No"}
+                ],
+                "feature": "Public_Speaking_Experience"
+            }
+        ]
+    }
+    
+    # Flatten the dictionary into a single list of questions
+    all_questions = []
+    for category in questions_dict.values():
+        all_questions.extend(category)
+    
+    return all_questions
 
 def get_randomized_questions():
-    """Selects 10 random questions from the pool of 30."""
+    """Selects 15 random questions from the pool of questions."""
     all_questions = get_all_questions()
     features = list(set(q['feature'] for q in all_questions))
     selected = []
@@ -643,12 +786,12 @@ def get_randomized_questions():
     # Remove selected questions from the pool
     remaining = [q for q in all_questions if q not in selected]
 
-    # Calculate how many more we need to reach 10
-    needed = 10 - len(selected)
+    # Calculate how many more we need to reach 15
+    needed = 15 - len(selected)
 
     # Only sample if we have remaining questions and need more
     if needed > 0 and remaining:
-        selected.extend(random.sample(remaining, min(needed, len(remaining))))
+        selected.extend(random.sample(remaining, min(needed, len(remaining)))
 
     random.shuffle(selected)
     return selected
@@ -667,6 +810,14 @@ direct_input_features = {
         "type": "number", 
         "min": 0, 
         "max": 50, 
+        "step": 1, 
+        "default": 0
+    },
+    "Certifications_Count": {
+        "question": "How many professional or technical certifications have you earned?",
+        "type": "number", 
+        "min": 0, 
+        "max": 20, 
         "step": 1, 
         "default": 0
     }
@@ -743,10 +894,15 @@ def main():
                     # Map user responses to model input format
                     for col in input_data.columns:
                         if col in st.session_state.user_responses:
-                            if col in ['Communication_Skills', 'Leadership_Skills', 'Teamwork_Skills']:
-                                level_map = {"Low": 0, "Medium": 1, "High": 2}
+                            if col in ['Communication_Skills', 'Leadership_Skills', 'Teamwork_Skills', 
+                                      'Decision_Making', 'Aptitude_Level', 'Adaptability', 
+                                      'Time_Management', 'Problem_Solving', 'Emotional_Intelligence',
+                                      'Stress_Tolerance', 'Technical_Skill_Level', 'Risk_Tolerance',
+                                      'Introvert_Extrovert_Score', 'Work_Life_Balance_Preference',
+                                      'Salary_Expectation', 'Openness', 'Conscientiousness',
+                                      'Extraversion', 'Agreeableness', 'Neuroticism', 'Creativity_Score']:
+                                level_map = {"Low": 0, "Medium": 1, "High": 2, "Moderate": 1}
                                 input_data[col] = level_map.get(st.session_state.user_responses[col], 1)
-                                # Encode categorical features
                             elif col in le_dict:
                                 try:
                                     input_data[col] = le_dict[col].transform([st.session_state.user_responses[col]])[0]
@@ -762,8 +918,6 @@ def main():
                         # Make prediction
                         prediction = model.predict(input_data)
                         predicted_career = target_le.inverse_transform(prediction)[0]
-
-    
 
                         # Display results
                         st.success(f"### Your Best Career Match: **{predicted_career}**")
@@ -791,6 +945,9 @@ def main():
                                 elif feat == "Years_of_Experience":
                                     exp_val = st.session_state.user_responses.get("Years_of_Experience", 0)
                                     importance_desc = f"Your professional experience ({exp_val} years)"
+                                elif feat == "Certifications_Count":
+                                    cert_val = st.session_state.user_responses.get("Certifications_Count", 0)
+                                    importance_desc = f"Your professional certifications ({cert_val} certifications)"
                                 else:
                                     importance_desc = f"Your responses about {feat.replace('_', ' ').lower()}"
                                 
@@ -814,10 +971,10 @@ def main():
                                     else:
                                         st.metric("Avg. Experience", "N/A")
                                 with cols[2]:
-                                    if 'Interest' in career_data.columns:
-                                        st.metric("Common Interest", career_data['Interest'].mode()[0])
+                                    if 'Certifications_Count' in career_data.columns:
+                                        st.metric("Avg. Certifications", f"{career_data['Certifications_Count'].mean():.1f}")
                                     else:
-                                        st.metric("Common Interest", "N/A")
+                                        st.metric("Avg. Certifications", "N/A")
                                 
                                 st.write("\n**Common characteristics:**")
                                 if 'Work_Style' in career_data.columns:
@@ -826,6 +983,8 @@ def main():
                                     st.write(f"- Strengths: {career_data['Strengths'].mode()[0]}")
                                 if 'Communication_Skills' in career_data.columns:
                                     st.write(f"- Communication: {career_data['Communication_Skills'].mode()[0]}")
+                                if 'Technical_Skill_Level' in career_data.columns:
+                                    st.write(f"- Technical Skills: {career_data['Technical_Skill_Level'].mode()[0]}")
                             else:
                                 st.write("No additional information available for this career in our dataset.")
                         
@@ -877,10 +1036,10 @@ def main():
                     else:
                         st.metric("Avg. Experience", "N/A")
                 with cols[2]:
-                    if 'Interest' in career_data.columns:
-                        st.metric("Common Interest", career_data['Interest'].mode()[0])
+                    if 'Certifications_Count' in career_data.columns:
+                        st.metric("Avg. Certifications", f"{career_data['Certifications_Count'].mean():.1f}")
                     else:
-                        st.metric("Common Interest", "N/A")
+                        st.metric("Avg. Certifications", "N/A")
 
                 st.write("\n**Common characteristics:**")
                 if 'Work_Style' in career_data.columns:
@@ -889,6 +1048,12 @@ def main():
                     st.write(f"- Strengths: {career_data['Strengths'].mode()[0]}")
                 if 'Communication_Skills' in career_data.columns:
                     st.write(f"- Communication: {career_data['Communication_Skills'].mode()[0]}")
+                if 'Technical_Skill_Level' in career_data.columns:
+                    st.write(f"- Technical Skills: {career_data['Technical_Skill_Level'].mode()[0]}")
+                if 'Learning_Style' in career_data.columns:
+                    st.write(f"- Learning Style: {career_data['Learning_Style'].mode()[0]}")
+                if 'Risk_Tolerance' in career_data.columns:
+                    st.write(f"- Risk Tolerance: {career_data['Risk_Tolerance'].mode()[0]}")
             else:
                 st.warning("No data available for this career.")
         else:
@@ -896,3 +1061,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
