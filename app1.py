@@ -24,10 +24,11 @@ def apply_custom_css():
     <style>
     /* Main background with image and overlay */
     .stApp {
-        background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+        background-image: url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+        background: #ffffff;
     }
     
     /* Overlay for content readability */
